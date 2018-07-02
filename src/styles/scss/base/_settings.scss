@@ -1,0 +1,14 @@
+$mdc-theme-primary: rgb(86, 156, 214);
+$mdc-theme-secondary: rgb(214, 157, 133);
+$mdc-theme-background: rgb(30, 30, 30);
+$mdc-theme--surface: white;
+$mdc-theme-on-primary: white;
+$mdc-theme-on-secondary: black;
+$mdc-theme--on-surface: black;
+$mdc-theme--primary-bg: var($mdc-theme-background);
+$mdc-theme--secondary-bg: var($mdc-theme-background);
+
+$theme-helper: rgb(181, 206, 146);
+$theme-editing: rgb(43, 145, 175);
+
+@import "material-components-web/material-components-web";

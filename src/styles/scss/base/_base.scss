@@ -1,0 +1,17 @@
+body {
+  color: white;
+  background-color: $mdc-theme-background;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: default;
+}
+
+// background-image: url(../images/Keyboard.png);
