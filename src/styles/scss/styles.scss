@@ -3,6 +3,8 @@
 @import './base/base';
 
 /* components */
-@import 'app';
-@import 'button';
-@import 'textfield';
+@import './components/app';
+
+/* UI components*/
+@import './components/UI/button';
+@import './components/UI/textfield';
