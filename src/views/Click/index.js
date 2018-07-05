@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { Creators } from '@redux/actions'
+import {MDCSnackbar} from '@material/snackbar'
+import Snackbars from '@components/UI/Snackbars'
 
 import TextField from '@components/UI/TextField'
 import Button from '@components/UI/Button'
@@ -22,6 +24,20 @@ class Click extends Component{
     this.setState(state => ({ ...state, newValue: 'teste' }))
   }
 
+  handleShowSnackbar = () => {
+    const { message, actionText, actionHandler } = this.props.showSnackbar('Mensagem de teste', 'fechar', () => {})
+
+    const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'))
+
+    const dataObj = {
+      message: message,
+      actionText: actionText,
+      actionHandler: actionHandler
+    }
+
+    snackbar.show(dataObj)
+  }
+
   render() {
     const { newValue } = this.state
 
@@ -29,7 +45,9 @@ class Click extends Component{
       <div>
         <TextField id='my-text-field' type='text' helperId='username-helper-text' labelText='Label' labelHelper='Label helper' onChange={ this.handleInputChange }></TextField>
         <Button labelText='Click me!' onClick={ this.handleClickButton }></Button>
-        <h1 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h1>        
+        <Button labelText='Message!' onClick={ this.handleShowSnackbar }></Button>
+        <h1 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h1>     
+        <Snackbars />   
       </div>
     )
   }
@@ -40,9 +58,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  clickButton: newValue => dispatch(Creators.clickButton(newValue))
+  clickButton: newValue => dispatch(Creators.clickButton(newValue)),
+  showSnackbar: (message, actionText, actionHandler) => dispatch(Creators.showSnackbar(message, actionText, actionHandler))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Click)
-
-
