@@ -1,8 +1,8 @@
 import { createActions } from 'reduxsauce'
 
 import click from './click'
-import snackbars from './snackbars'
+import snackbar from './snackbar'
 
-const actions = Object.assign({}, click, snackbars)
+const actions = Object.assign({}, click, snackbar)
 
 export const { Types, Creators } = createActions(actions)

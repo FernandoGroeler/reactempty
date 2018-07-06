@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { Creators } from '@redux/actions'
 import {MDCSnackbar} from '@material/snackbar'
-import Snackbars from '@components/UI/Snackbars'
+import Snackbar from '@components/UI/Snackbar'
 
 import TextField from '@components/UI/TextField'
 import Button from '@components/UI/Button'
@@ -47,7 +47,7 @@ class Click extends Component{
         <Button labelText='Click me!' onClick={ this.handleClickButton }></Button>
         <Button labelText='Message!' onClick={ this.handleShowSnackbar }></Button>
         <h1 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h1>     
-        <Snackbars />   
+        <Snackbar />   
       </div>
     )
   }

@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 
 import { Creators } from '@redux/actions'
 
-import { Snackbars as SnackbarsComponent } from '@components/UI/Snackbars'
+import { Snackbar as SnackbarComponent } from '@components/UI/Snackbar'
 
-class Snackbars extends Component{  
+class Snackbar extends Component{  
   render() {
     return (
-      <SnackbarsComponent></SnackbarsComponent>
+      <SnackbarComponent></SnackbarComponent>
     )
   }
 }
@@ -23,4 +23,4 @@ const mapDispatchToProps = dispatch => ({
   showSnackbar: (message, actionText, actionHandler) => dispatch(Creators.showSnackbar(message, actionText, actionHandler))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Snackbars)
+export default connect(mapStateToProps, mapDispatchToProps)(Snackbar)

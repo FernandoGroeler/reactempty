@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Snackbars extends Component {
+class Snackbar extends Component {
   render() {
     return (
       <div className='mdc-snackbar mdc-snackbar--align-start'
@@ -16,4 +16,4 @@ class Snackbars extends Component {
   }
 }
 
-export default Snackbars
+export default Snackbar

@@ -1,5 +1,5 @@
-const snackbars = {
+const snackbar = {
   showSnackbar: ['message', 'actionText', 'actionHandler']
 }
 
-export default snackbars
+export default snackbar

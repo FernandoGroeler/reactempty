@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
 import click from './click'
-import snackbars from './snackbars'
+import snackbar from './snackbar'
 
 export const reducers = {
   click,
-  snackbars
+  snackbar
 }
 
 export default combineReducers(reducers)
