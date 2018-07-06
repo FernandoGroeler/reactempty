@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { Creators } from '@redux/actions'
+
 import {MDCSnackbar} from '@material/snackbar'
+import {MDCDialog} from '@material/dialog'
+
 import Snackbar from '@components/UI/Snackbar'
+import Dialog from '@components/UI/Dialog'
 
 import TextField from '@components/UI/TextField'
 import Button from '@components/UI/Button'
@@ -38,16 +42,33 @@ class Click extends Component{
     snackbar.show(dataObj)
   }
 
+  handleShowDialog = () => {
+    const dialog = new MDCDialog(document.querySelector('#my-mdc-dialog'))
+
+    dialog.listen('MDCDialog:accept', function() {
+      console.log('accepted');
+    })
+    
+    dialog.listen('MDCDialog:cancel', function() {
+      console.log('canceled');
+    })
+    
+    dialog.show();
+  }
+
   render() {
     const { newValue } = this.state
+    const { headerTitle, body } = this.props.showDialog('Titulo', 'Aviso de teste!')
 
     return (
       <div>
         <TextField id='my-text-field' type='text' helperId='username-helper-text' labelText='Label' labelHelper='Label helper' onChange={ this.handleInputChange }></TextField>
         <Button labelText='Click me!' onClick={ this.handleClickButton }></Button>
-        <Button labelText='Message!' onClick={ this.handleShowSnackbar }></Button>
+        <Button labelText='Snackbar!' onClick={ this.handleShowSnackbar }></Button>
+        <Button labelText='Dialog!' onClick={ this.handleShowDialog }></Button>
         <h1 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h1>     
         <Snackbar />   
+        <Dialog headerTitle={ headerTitle } body={ body } />
       </div>
     )
   }
@@ -59,7 +80,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   clickButton: newValue => dispatch(Creators.clickButton(newValue)),
-  showSnackbar: (message, actionText, actionHandler) => dispatch(Creators.showSnackbar(message, actionText, actionHandler))
+  showSnackbar: (message, actionText, actionHandler) => dispatch(Creators.showSnackbar(message, actionText, actionHandler)),
+  showDialog: (headerTitle, body) => dispatch(Creators.showDialog(headerTitle, body))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Click)
