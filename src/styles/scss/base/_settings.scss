@@ -1,16 +1,69 @@
-$mdc-theme-primary: rgb(86, 156, 214);
-$mdc-theme-secondary: rgb(214, 157, 133);
-$mdc-theme-background: rgb(30, 30, 30);
-$mdc-theme-surface: white;
-$mdc-theme-on-primary: white;
-$mdc-theme-on-secondary: white;
-$mdc-theme-on-surface: white;
-$mdc-theme-primary-bg: var($mdc-theme-background);
-$mdc-theme-secondary-bg: var($mdc-theme-background);
-$mdc-theme-text-section-on-dark: white;
-$mdc-theme-text-section-on-light: rgb(30, 30, 30);
+@import './colors';
 
-$theme-helper: rgb(181, 206, 146);
-$theme-editing: rgb(43, 145, 175);
+//-> Definir o tema antes da importação do componente UI. 
+$mdc-theme-primary: $color-light-blue;
+$mdc-theme-secondary: $color-light-green;
+$mdc-theme-on-primary: $color-white;
+$mdc-theme-on-secondary: $color-white;
+$mdc-theme-background: $color-dark;
 
+$mdc-theme-surface: $color-dark;
+$mdc-theme-on-surface: $color-light-blue;
+$mdc-theme-primary-bg: $color-dark;
+$mdc-theme-secondary-bg: $color-dark;
+
+
+$mdc-typography-styles-headline1: (
+  color: $color-dark-blue
+);
+
+$mdc-typography-styles-headline2: (
+  color: $color-dark-blue
+);
+
+$mdc-typography-styles-headline3: (
+  color: $color-dark-blue
+);
+
+$mdc-typography-styles-headline4: (
+  color: $color-dark-blue
+);
+
+$mdc-typography-styles-headline5: (
+  color: $color-dark-blue
+);
+
+$mdc-typography-styles-headline6: (
+  color: $color-dark-blue
+);
+
+$mdc-typography-styles-subtitle1: (
+  color: $color-light-blue
+);
+
+$mdc-typography-styles-subtitle2: (
+  color: $color-light-blue
+);
+
+$mdc-typography-styles-body1: (
+  color: $color-orange
+);
+
+$mdc-typography-styles-body2: (
+  color: $color-orange
+);
+
+$mdc-typography-styles-Caption: (
+  color: $color-light-blue
+); 
+
+$mdc-typography-styles-button: (
+  color: $color-light-green
+); 
+
+$mdc-typography-styles-Overline: (
+  color: $color-light-blue
+); 
+
+//-> Importação do componente UI
 @import "material-components-web/material-components-web";

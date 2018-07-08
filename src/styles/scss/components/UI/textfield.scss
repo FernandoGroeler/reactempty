@@ -1,10 +1,10 @@
 .mdc-text-field {
   @include mdc-text-field-bottom-line-color($mdc-theme-primary);
   @include mdc-text-field-hover-bottom-line-color($mdc-theme-secondary);
-  @include mdc-text-field-line-ripple-color_($theme-editing);
+  @include mdc-text-field-line-ripple-color_($color-dark-blue);
   @include mdc-text-field-ink-color($mdc-theme-primary);
   @include mdc-text-field-label-color($mdc-theme-primary);
-  @include mdc-text-field-helper-text-color($theme-helper);
+  @include mdc-text-field-helper-text-color($color-orange);
   @include mdc-text-field-fullwidth-bottom-line-color($mdc-theme-primary);
   @include mdc-text-field-icon-color($mdc-theme-primary);
 }

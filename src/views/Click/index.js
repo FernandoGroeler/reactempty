@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Creators } from '@redux/actions'
 
 import {MDCSnackbar} from '@material/snackbar'
-import {MDCDialog} from '@material/dialog'
+import {MDCDialog } from '@material/dialog'
 
 import Snackbar from '@components/UI/Snackbar'
 import Dialog from '@components/UI/Dialog'
@@ -66,7 +66,7 @@ class Click extends Component{
         <Button labelText='Click me!' onClick={ this.handleClickButton }></Button>
         <Button labelText='Snackbar!' onClick={ this.handleShowSnackbar }></Button>
         <Button labelText='Dialog!' onClick={ this.handleShowDialog }></Button>
-        <h1 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h1>     
+        <h6 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h6>     
         <Snackbar />   
         <Dialog headerTitle={ headerTitle } body={ body } />
       </div>
