@@ -11,6 +11,7 @@ import Dialog from '@components/UI/Dialog'
 
 import TextField from '@components/UI/TextField'
 import Button from '@components/UI/Button'
+import Switche from '@components/UI/Switche'
 
 class Click extends Component{  
   constructor (props) {
@@ -67,6 +68,7 @@ class Click extends Component{
         <Button labelText='Snackbar!' onClick={ this.handleShowSnackbar }></Button>
         <Button labelText='Dialog!' onClick={ this.handleShowDialog }></Button>
         <h6 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h6>     
+        <Switche />
         <Snackbar />   
         <Dialog headerTitle={ headerTitle } body={ body } />
       </div>

@@ -1,47 +1,47 @@
 @import './colors';
 
 //-> Definir o tema antes da importação do componente UI. 
-$mdc-theme-primary: $color-light-blue;
+$mdc-theme-primary: $color-blue;
 $mdc-theme-secondary: $color-light-green;
 $mdc-theme-on-primary: $color-white;
 $mdc-theme-on-secondary: $color-white;
 $mdc-theme-background: $color-dark;
 
 $mdc-theme-surface: $color-dark;
-$mdc-theme-on-surface: $color-light-blue;
+$mdc-theme-on-surface: $color-blue;
 $mdc-theme-primary-bg: $color-dark;
 $mdc-theme-secondary-bg: $color-dark;
 
 $mdc-typography-styles-headline1: (
-  color: $color-dark-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-headline2: (
-  color: $color-dark-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-headline3: (
-  color: $color-dark-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-headline4: (
-  color: $color-dark-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-headline5: (
-  color: $color-dark-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-headline6: (
-  color: $color-dark-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-subtitle1: (
-  color: $color-light-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-subtitle2: (
-  color: $color-light-blue
+  color: $color-blue
 );
 
 $mdc-typography-styles-body1: (
@@ -52,16 +52,17 @@ $mdc-typography-styles-body2: (
   color: $color-orange
 );
 
-$mdc-typography-styles-Caption: (
-  color: $color-light-blue
+$mdc-typography-styles-caption: (
+  color: $color-blue,
+  font-size: 14px
 ); 
 
 $mdc-typography-styles-button: (
   color: $color-light-green
 ); 
 
-$mdc-typography-styles-Overline: (
-  color: $color-light-blue
+$mdc-typography-styles-overline: (
+  color: $color-blue
 ); 
 
 //-> Importação do componente UI

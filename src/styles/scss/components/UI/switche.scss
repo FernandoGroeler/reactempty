@@ -1,0 +1,5 @@
+.mdc-switch {
+	@include mdc-switch-track-color($mdc-theme-primary);
+  @include mdc-switch-knob-color($mdc-theme-primary);
+  @include mdc-switch-focus-indicator-color($mdc-theme-primary);    
+}
