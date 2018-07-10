@@ -59,7 +59,7 @@ class Click extends Component{
 
   render() {
     const { newValue } = this.state
-    const { headerTitle, body } = this.props.showDialog('Titulo', 'Aviso de teste!')
+    const { headerTitle, body } = this.props.showDialog('Titulo', newValue)
 
     return (
       <div>
