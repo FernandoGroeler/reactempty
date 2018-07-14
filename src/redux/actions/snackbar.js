@@ -1,5 +1,5 @@
 const snackbar = {
-  showSnackbar: ['message', 'actionText', 'actionHandler']
+  showSnackbar: ['message', 'actionText', 'actionHandler', 'isError']
 }
 
 export default snackbar

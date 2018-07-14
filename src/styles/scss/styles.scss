@@ -1,4 +1,5 @@
 /* base */
+@import './base/colors';
 @import './base/settings';
 @import './base/base';
 
@@ -7,6 +8,6 @@
 
 /* UI components*/
 @import './components/UI/button';
-@import './components/UI/textfield';
 @import './components/UI/snackbar';
 @import './components/UI/switche';
+@import './components/UI/textfield';

@@ -1,5 +1,5 @@
-$color-light-green: #86B04F;
-$color-orange: #CC8566;
+$color-light-green: #23af46;
+$color-orange: #ce9178;
 $color-white: #FFFFFF;
 $color-dark: #0E1726;
 $color-light: #F8F9FD;
@@ -7,3 +7,10 @@ $color-blue: #3B94F3;
 $color-gray: #8899A6;
 $color-deep-purple: #310960;
 $color-purple: #4A148C;
+$color-red: #b71c1c;
+$color-yellow: #f5e72e;
+
+:export {
+  colorRed: $color-red;
+  colorPurple: $color-purple;
+}

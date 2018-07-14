@@ -4,6 +4,8 @@ import createHashHistory from 'history/createHashHistory'
 
 import App from '@components/App'
 import Click from '@views/Click'
+import Snackbar from '@components/UI/Snackbar'
+import Dialog from '@components/UI/Dialog'
 
 class Routes extends Component {
   render() {
@@ -16,7 +18,9 @@ class Routes extends Component {
             <Route exact path='/' component={ Click } />
             <Route path='/' component={ App } />
             <Route path='/click' component={ Click } />
-          </Switch>  
+          </Switch> 
+          <Snackbar /> 
+          <Dialog />
         </div>
       </Router>
     )

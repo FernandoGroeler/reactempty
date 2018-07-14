@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import { Creators } from '@redux/actions'
 
 class Dialog extends Component {
   render() {
@@ -28,4 +31,13 @@ class Dialog extends Component {
   }
 }
 
-export default Dialog
+const mapStateToProps = state => ({
+  headerTitle: state.dialog.headerTitle,
+  body: state.dialog.body
+})
+
+const mapDispatchToProps = dispatch => ({
+  showDialog: (headerTitle, body) => dispatch(Creators.showDialog(headerTitle, body))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dialog)
