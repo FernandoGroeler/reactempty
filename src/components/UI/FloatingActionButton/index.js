@@ -9,8 +9,8 @@ class FloatingActionButton extends Component {
   
   render() {
     return (
-      <button class='mdc-fab app-fab--absolute' aria-label={ this.props.ariaLabel }>
-        <span class='mdc-fab__icon material-icons'>{ this.props.iconName }</span>
+      <button className='mdc-fab app-fab--absolute' aria-label={ this.props.ariaLabel }>
+        <span className='mdc-fab__icon material-icons'>{ this.props.iconName }</span>
       </button>      
     )
   }

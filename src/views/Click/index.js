@@ -7,6 +7,7 @@ import TextField from '@components/UI/TextField'
 import Button from '@components/UI/Button'
 import Switche from '@components/UI/Switche'
 import FloatingActionButton from '@components/UI/FloatingActionButton'
+import IconButton from '@components/UI/IconButton'
 
 class Click extends Component{  
   constructor (props) {
@@ -44,7 +45,13 @@ class Click extends Component{
         <Button labelText='Dialog!' onClick={ () => this.handleShowDialog('Titulo', newValue) }></Button>
         <h6 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h6>     
         <Switche />
+        <br></br>
         <FloatingActionButton ariaLabel='Code' iconName='code' />
+        <br></br>
+        <br></br>
+        <IconButton id='add-to-favorite' ariaLabel='Add to favorites' dataToggleOnContent='favorite' 
+          dataToggleOnLabel='Remove from favorites' dataToogleOffContent='favorite_border'
+          dataToggleOffLabel='Add to favorites' iconName='favorite_border'/>
       </div>
     )
   }
