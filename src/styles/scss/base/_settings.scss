@@ -61,7 +61,12 @@ $mdc-typography-styles-button: (
 
 $mdc-typography-styles-overline: (
   color: $color-blue
-); 
+);
+
+//-> Evitando o Flash-Of-Unstyled-Content (FOUC)
+.mdc-snackbar { 
+  transform: translateY(100%); 
+}
 
 //-> Importação do componente UI
 @import 'material-components-web/material-components-web';

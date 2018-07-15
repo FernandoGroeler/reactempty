@@ -1,0 +1,4 @@
+.mdc-fab {
+  @include mdc-fab-container-color($mdc-theme-secondary);
+  @include mdc-fab-ink-color($color-white);
+}

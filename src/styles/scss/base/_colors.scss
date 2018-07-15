@@ -11,6 +11,15 @@ $color-red: #b71c1c;
 $color-yellow: #f5e72e;
 
 :export {
-  colorRed: $color-red;
+  colorLightGreen: $color-light-green; 
+  colorOrange: $color-orange;
+  colorWhite: $color-white;
+  colorDark: $color-dark;
+  colorLight: $color-light;
+  colorBlue: $color-blue;
+  colorGray: $color-gray;
+  colorDeepPurple: $color-deep-purple;
   colorPurple: $color-purple;
+  colorRed: $color-red;
+  colorYellow: $color-yellow;
 }

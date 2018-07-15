@@ -6,6 +6,7 @@ import { Creators } from '@redux/actions'
 import TextField from '@components/UI/TextField'
 import Button from '@components/UI/Button'
 import Switche from '@components/UI/Switche'
+import FloatingActionButton from '@components/UI/FloatingActionButton'
 
 class Click extends Component{  
   constructor (props) {
@@ -25,7 +26,7 @@ class Click extends Component{
   }
 
   handleShowSnackbar = () => {
-    this.props.showSnackbar('Mensagem de teste', 'fechar', () => {})
+    this.props.showSnackbar('Mensagem de teste', 'Fechar', () => {})
   }
 
   handleShowDialog = (headerTitle, body) => {
@@ -43,6 +44,7 @@ class Click extends Component{
         <Button labelText='Dialog!' onClick={ () => this.handleShowDialog('Titulo', newValue) }></Button>
         <h6 id='mdc-typography' className='mdc-typography--headline6'>{ newValue }</h6>     
         <Switche />
+        <FloatingActionButton ariaLabel='Code' iconName='code' />
       </div>
     )
   }
