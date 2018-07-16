@@ -27,7 +27,7 @@ class Click extends Component{
   }
 
   handleShowSnackbar = () => {
-    this.props.showSnackbar('Mensagem de teste', 'Fechar', () => {})
+    this.props.showSnackbar('Mensagem de teste', 'Fechar')
   }
 
   handleShowDialog = (headerTitle, body) => {

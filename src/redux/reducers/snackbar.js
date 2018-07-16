@@ -4,9 +4,9 @@ import { createReducer } from 'reduxsauce'
 
 import { Types } from '@redux/actions'
 
-import {MDCSnackbar} from '@material/snackbar'
+import { MDCSnackbar } from '@material/snackbar'
 
-export const INITIAL_STATE = Immutable({
+const INITIAL_STATE = Immutable({
   message: '',
   actionText: '',
   actionHandler: () => {},
@@ -14,9 +14,13 @@ export const INITIAL_STATE = Immutable({
 })
 
 export const showSnackbar = (state = INITIAL_STATE, action) => {
-  const { message, actionText, actionHandler, isError } = action
+  const { message, actionText, isError } = action
 
-  const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'))
+  var actionHandler = action.actionHandler
+
+  if (actionHandler === undefined) {
+    actionHandler = state.actionHandler
+  }
 
   const dataObj = {
     message: message,
@@ -24,7 +28,9 @@ export const showSnackbar = (state = INITIAL_STATE, action) => {
     actionHandler: actionHandler
   }
 
-  snackbar.show(dataObj)  
+  const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'))
+  snackbar.show(dataObj)
+
   return { ...state, message: message, actionText: actionText, actionHandler: actionHandler, isError: isError }
 }
 
